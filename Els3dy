@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Personal Information</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0d1b2a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        background-color: #1b263b;
+        width: 90%;
+        max-width: 500px;
+        margin-top: 40px;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid #415a77;
+        box-shadow: 0 0 15px #00000055;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #e0e1dd;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid #778da9;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    .info-box {
+        margin-bottom: 20px;
+    }
+
+    .info-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #e0e1dd;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #0d1b2a;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #415a77;
+    }
+
+    .social img {
+        width: 28px;
+        height: 28px;
+        border-radius: 5px;
+    }
+
+    .social a {
+        color: #e0e1dd;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>My Personal Information</h1>
+
+        <img src="your-image.jpg" class="profile-img">
+
+        <!-- NAME -->
+        <div class="info-box">
+            <div class="info-title">Name:</div>
+            <div>Abdelrahman Abdeltwab ElSaady</div>
+        </div>
+
+        <!-- BIRTHDAY -->
+        <div class="info-box">
+            <div class="info-title">Birthday:</div>
+            <div>12 / 12 / 2007</div>
+        </div>
+
+        <!-- WHATSAPP -->
+        <div class="social">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+            <a href="https://wa.me/201095625765" target="_blank">
+                WhatsApp
+            </a>
+        </div>
+
+        <!-- INSTAGRAM -->
+        <div class="social">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+            <a href="https://www.instagram.com/el_s3dy?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank">
+                Instagram
+            </a>
+        </div>
+
+        <!-- SNAPCHAT -->
+        <div class="social">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+            <a href="https://www.snapchat.com/add/el_s33dy?share_id=MLocH5xRxY8&locale=ar-EG" target="_blank">
+                Snapchat
+            </a>
+        </div>
+
+        <!-- PINTEREST -->
+        <div class="social">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670228.png">
+            <a href="https://pin.it/69rqPwAhW" target="_blank">
+                Pinterest
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
