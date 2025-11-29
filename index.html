@@ -17,51 +17,54 @@
 
     .container {
         background-color: #1b263b;
-        width: 95%;  /* كبرت العرض */
-        max-width: 600px;  /* كبرت الماكس */
+        width: 95%;
+        max-width: 700px;
         margin-top: 40px;
-        padding: 30px;  /* كبر البادينج */
-        border-radius: 15px;
+        padding: 40px;
+        border-radius: 20px;
         border: 2px solid #415a77;
-        box-shadow: 0 0 20px #00000055;
+        box-shadow: 0 0 25px #00000077;
     }
 
     h1 {
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         color: #e0e1dd;
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .profile-img {
-        width: 200px;  /* كبرت الصورة */
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-        border: 3px solid #778da9;
+        border: 4px solid #778da9;
         display: block;
-        margin: 0 auto 25px auto;
+        margin: 0 auto 30px auto;
         object-fit: cover;
     }
 
     .info-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         margin-bottom: 25px;
-        font-size: 20px;  /* كبر الخط */
+        font-size: 22px;
+        gap: 15px;
     }
 
     .info-title {
-        font-size: 20px;
-        margin-bottom: 8px;
         font-weight: bold;
         color: #e0e1dd;
+        width: 150px; /* مساحة ثابتة للكلمة التعريفية */
     }
 
     .social {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
         background-color: #0d1b2a;
-        padding: 20px;  /* كبر المربع */
-        border-radius: 15px;
+        padding: 25px;
+        border-radius: 20px;
         margin-bottom: 15px;
         border: 1px solid #415a77;
         transition: transform 0.2s;
@@ -72,15 +75,16 @@
     }
 
     .social img {
-        width: 50px;   /* كبر حجم الأيقونات */
-        height: 50px;
-        border-radius: 5px;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
     }
 
     .social a {
         color: #e0e1dd;
         text-decoration: none;
-        font-size: 20px;  /* كبر حجم النص */
+        font-size: 22px;
+        font-weight: bold;
     }
 
 </style>
@@ -138,7 +142,7 @@
 
         <!-- PINTEREST -->
         <div class="social">
-            <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png"> <!-- أيقونة البنترست الصحيحة -->
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png">
             <a href="https://pin.it/69rqPwAhW" target="_blank">
                 Pinterest
             </a>
