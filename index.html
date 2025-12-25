@@ -7,151 +7,147 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* BODY — CENTER EVERYTHING */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #071224;
-    color: #e0e1dd;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-    perspective: 1400px;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#071224;
+    color:#e0e1dd;
+    overflow:hidden;
+    height:100vh;
+    perspective:1200px;
 }
 
-/* STARS BACKGROUND */
-.stars {
-    position: fixed;
-    inset: 0;
-    z-index: -2;
+/* STARS */
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
 }
 
-.star {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #f2f2e8;
-    border-radius: 50%;
-    opacity: 0;
-    animation: twinkle 7s infinite ease-in-out;
+.star{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#f2f2e8;
+    border-radius:50%;
+    opacity:0;
+    animation:twinkle 7s infinite ease-in-out;
 }
 
-@keyframes twinkle {
-    0%   { opacity: 0; }
-    30%  { opacity: 0.9; }
-    60%  { opacity: 0.4; }
-    100% { opacity: 0; }
+@keyframes twinkle{
+    0%{opacity:0;}
+    30%{opacity:.9;}
+    60%{opacity:.4;}
+    100%{opacity:0;}
 }
 
 /* SCENE */
-.scene {
-    transform-style: preserve-3d;
+.scene{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform-style:preserve-3d;
 }
 
-/* MAIN CARD */
-.container {
-    background: rgba(27, 38, 59, 0.9);
-    width: 95%;
-    max-width: 700px;
-    padding: 50px;
-    border-radius: 26px;
-    border: 1px solid #415a77;
-    box-shadow: 0 40px 90px rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-
-    transform-style: preserve-3d;
-    transition: transform 0.15s ease-out;
+/* CARD */
+.container{
+    background:rgba(27,38,59,.9);
+    width:95%;
+    max-width:700px;
+    padding:50px;
+    border-radius:26px;
+    border:1px solid #415a77;
+    box-shadow:0 40px 80px rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
+    transform-style:preserve-3d;
+    transition:transform .15s ease-out;
 }
 
 /* TITLE */
-h1 {
-    text-align: center;
-    margin-bottom: 35px;
-    font-weight: 600;
-    letter-spacing: 1.3px;
+h1{
+    text-align:center;
+    margin-bottom:35px;
+    font-weight:600;
+    letter-spacing:1.2px;
 }
 
-/* PROFILE IMAGE */
-.profile-img {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    border: 4px solid #778da9;
-    display: block;
-    margin: 0 auto 35px;
-    object-fit: cover;
-    transform: translateZ(70px);
+/* PROFILE */
+.profile-img{
+    width:240px;
+    height:240px;
+    border-radius:50%;
+    border:4px solid #778da9;
+    margin:0 auto 35px;
+    display:block;
+    object-fit:cover;
+    transform:translateZ(60px);
 }
 
 /* INFO */
-.info-box {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    transform: translateZ(45px);
+.info-box{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+    font-size:18px;
+    transform:translateZ(40px);
 }
 
-.info-title {
-    width: 150px;
-    color: #cbd5e1;
-    font-weight: 500;
+.info-title{
+    width:150px;
+    color:#cbd5e1;
+    font-weight:500;
 }
 
 /* PHONE LINK */
-.phone-link {
-    color: #e0e1dd;
-    text-decoration: none;
+.phone-link{
+    color:#e0e1dd;
+    text-decoration:none;
 }
 
-.phone-link:hover {
-    text-decoration: underline;
+.phone-link:hover{
+    text-decoration:underline;
 }
 
 /* SOCIAL */
-.social {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: rgba(7, 18, 36, 0.9);
-    padding: 18px 22px;
-    border-radius: 18px;
-    margin-top: 15px;
-    border: 1px solid #415a77;
-
-    transform: translateZ(35px);
-    transition: transform 0.3s ease;
+.social{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:rgba(7,18,36,.9);
+    padding:18px 22px;
+    border-radius:18px;
+    margin-top:15px;
+    border:1px solid #415a77;
+    transition:transform .3s ease;
+    transform:translateZ(30px);
 }
 
-.social:hover {
-    transform: translateZ(70px) scale(1.05);
+.social:hover{
+    transform:translateZ(50px) scale(1.05);
 }
 
-.social img {
-    width: 48px;
+.social img{
+    width:48px;
 }
 
-.social a {
-    color: #e0e1dd;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
+.social a{
+    color:#e0e1dd;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:500;
 }
 </style>
 </head>
 
 <body>
 
-<!-- STARS -->
 <div class="stars"></div>
 
 <div class="scene" id="scene">
@@ -204,28 +200,28 @@ h1 {
 </div>
 
 <script>
-/* CREATE STARS */
-const stars = document.querySelector('.stars');
-for (let i = 0; i < 140; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.left = Math.random() * 100 + '%';
-    star.style.top = Math.random() * 100 + '%';
-    star.style.animationDelay = Math.random() * 6 + 's';
-    star.style.animationDuration = 5 + Math.random() * 6 + 's';
-    stars.appendChild(star);
+/* STARS */
+const starsBox=document.querySelector('.stars');
+for(let i=0;i<140;i++){
+    const s=document.createElement('div');
+    s.className='star';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=Math.random()*6+'s';
+    s.style.animationDuration=5+Math.random()*6+'s';
+    starsBox.appendChild(s);
 }
 
 /* FULL 3D PARALLAX */
-const scene = document.getElementById('scene');
-const card = document.getElementById('card');
+const scene=document.getElementById('scene');
+const card=document.getElementById('card');
 
-document.addEventListener('mousemove', (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 18;
-    const y = (window.innerHeight / 2 - e.clientY) / 18;
+document.addEventListener('mousemove',e=>{
+    const x=(window.innerWidth/2-e.clientX)/18;
+    const y=(window.innerHeight/2-e.clientY)/18;
 
-    scene.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-    card.style.transform = `rotateY(${x/2}deg) rotateX(${y/2}deg)`;
+    scene.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
+    card.style.transform=`rotateY(${x/2}deg) rotateX(${y/2}deg)`;
 });
 </script>
 
