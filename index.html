@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAADY</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -13,83 +13,94 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Montserrat', sans-serif;
 }
 
 body{
-    height:100vh;
+    min-height:100vh;
     background:#06162d;
     color:#fff;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
     overflow:hidden;
 }
 
-/* ⭐ Stars */
+/* stars */
 canvas{
     position:fixed;
     inset:0;
     z-index:-1;
 }
 
-/* 🔤 Top text */
-.top-text{
-    font-size:22px;
-    letter-spacing:2px;
-    color:#eae6da;
-    margin-bottom:25px;
+/* content */
+.wrapper{
+    width:100%;
+    max-width:760px;
+    padding:40px 20px;
 }
 
-/* 🖼 Profile */
-.profile-img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:4px solid #eae6da;
-    object-fit:cover;
+/* text */
+.top-text{
+    font-size:18px;
+    letter-spacing:3px;
+    color:#eae6da;
     margin-bottom:30px;
 }
 
-/* 🔥 Name */
+/* image */
+.profile-img{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #eae6da;
+    margin-bottom:28px;
+}
+
+/* name */
 .name{
-    font-size:64px;
-    font-weight:800;
+    font-size:42px; /* لا ضخم ولا صغير */
+    font-weight:600;
     letter-spacing:6px;
-    margin-bottom:6px;
+    margin-bottom:8px;
 }
 
-/* 🎂 Birthday */
+/* birthday */
 .birthday{
-    font-size:16px;
-    color:#d0d0d0;
-    margin-bottom:45px;
+    font-size:15px;
+    color:#cfcfcf;
+    margin-bottom:50px;
 }
 
-/* 🔗 Links */
+/* links */
 .links{
     display:flex;
     flex-direction:column;
-    gap:22px; /* مسافة بين الأيقونات */
+    gap:22px;
 }
 
+/* pill buttons */
 .link{
-    display:inline-flex; /* يكون على قد المحتوى */
+    margin:0 auto;
+    display:flex;
     align-items:center;
-    gap:14px;
+    gap:18px;
+    padding:18px 34px;
+    background:rgba(15,55,105,0.9);
+    border-radius:999px; /* pill */
     text-decoration:none;
-    color:white;
-    background:rgba(12,42,79,0.9);
-    padding:12px 18px; /* padding على قد المحتوى */
-    border-radius:14px; /* حواف مدورة */
-    font-size:18px;
+    color:#fff;
+    font-size:20px;
+    font-weight:500;
+    min-width:320px; /* حجم واضح */
+    justify-content:center;
     transition:0.3s;
 }
 
 .link:hover{
-    background:#154a88;
+    background:#1b63b8;
     transform:translateY(-2px);
 }
 
@@ -97,7 +108,7 @@ canvas{
     font-size:26px;
 }
 
-/* Colors */
+/* icon colors */
 .phone{color:#4cff4c;}
 .whatsapp{color:#25D366;}
 .instagram{color:#E1306C;}
@@ -111,45 +122,48 @@ canvas{
 
 <canvas id="stars"></canvas>
 
-<div class="top-text">Easy Access For You</div>
+<div class="wrapper">
 
-<img src="IMG_20251210_010736.jpg" class="profile-img" alt="Profile">
+    <div class="top-text">Easy Access For You</div>
 
-<div class="name">SAADY</div>
-<div class="birthday">12/12/2007</div>
+    <img src="IMG_20251210_010736.jpg" class="profile-img">
 
-<div class="links">
+    <div class="name">SAADY</div>
+    <div class="birthday">12/12/2007</div>
 
-    <a href="tel:+201095625765" class="link">
-        <i class="fa-solid fa-phone phone"></i>
-        Communication
-    </a>
+    <div class="links">
 
-    <a href="https://wa.me/201095625765" class="link">
-        <i class="fa-brands fa-whatsapp whatsapp"></i>
-        WhatsApp
-    </a>
+        <a href="tel:+201095625765" class="link">
+            <i class="fa-solid fa-phone phone"></i>
+            Communication
+        </a>
 
-    <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank" class="link">
-        <i class="fa-brands fa-instagram instagram"></i>
-        Instagram
-    </a>
+        <a href="https://wa.me/201095625765" class="link">
+            <i class="fa-brands fa-whatsapp whatsapp"></i>
+            WhatsApp
+        </a>
 
-    <a href="mailto:els3dy111@gmail.com" class="link">
-        <i class="fa-solid fa-envelope email"></i>
-        Email
-    </a>
+        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" class="link" target="_blank">
+            <i class="fa-brands fa-instagram instagram"></i>
+            Instagram
+        </a>
 
-    <a href="#" class="link">
-        <i class="fa-brands fa-snapchat snapchat"></i>
-        Snapchat
-    </a>
+        <a href="mailto:els3dy111@gmail.com" class="link">
+            <i class="fa-solid fa-envelope email"></i>
+            Email
+        </a>
 
-    <a href="#" class="link">
-        <i class="fa-brands fa-pinterest pinterest"></i>
-        Pinterest
-    </a>
+        <a href="#" class="link">
+            <i class="fa-brands fa-snapchat snapchat"></i>
+            Snapchat
+        </a>
 
+        <a href="#" class="link">
+            <i class="fa-brands fa-pinterest pinterest"></i>
+            Pinterest
+        </a>
+
+    </div>
 </div>
 
 <script>
@@ -164,13 +178,13 @@ function resize(){
 resize();
 window.addEventListener("resize", resize);
 
-for(let i=0;i<150;i++){
+for(let i=0;i<140;i++){
     stars.push({
         x:Math.random()*w,
         y:Math.random()*h,
         r:Math.random()*2.5+1.5,
         o:Math.random(),
-        s:Math.random()*0.01+0.004
+        s:Math.random()*0.008+0.003
     });
 }
 
