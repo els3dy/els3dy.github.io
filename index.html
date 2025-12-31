@@ -21,6 +21,7 @@ body{
     background:#050f22;
     color:#fff;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
@@ -34,25 +35,18 @@ canvas{
     z-index:-1;
 }
 
-/* 📦 Content */
-.container{
-    width:100%;
-    max-width:700px;
-    padding:20px;
-}
-
 /* 🔤 Top text */
 .top-text{
-    font-size:18px;
+    font-size:22px;
     letter-spacing:2px;
     color:#eae6da;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 /* 🖼 Profile */
 .profile-img{
-    width:180px;
-    height:180px;
+    width:200px;
+    height:200px;
     border-radius:50%;
     border:4px solid #eae6da;
     object-fit:cover;
@@ -78,19 +72,18 @@ canvas{
 .links{
     display:flex;
     flex-direction:column;
-    gap:32px; /* مسافة بين الأيقونات */
+    gap:20px; /* مسافة بين الأيقونات */
 }
 
 .link{
-    width:100%;
-    background:rgba(12,42,79,0.9);
-    padding:24px 26px; /* padding أكبر للراحة */
-    border-radius:18px;
-    display:flex;
+    display:inline-flex; /* يكون على قد المحتوى */
     align-items:center;
-    gap:18px;
+    gap:14px;
     text-decoration:none;
     color:white;
+    background:rgba(12,42,79,0.9);
+    padding:10px 16px; /* padding صغير حسب الحجم */
+    border-radius:12px; /* حواف مدورة */
     font-size:18px;
     transition:0.3s;
 }
@@ -102,7 +95,6 @@ canvas{
 
 .link i{
     font-size:26px;
-    width:32px;
 }
 
 /* Colors */
@@ -119,48 +111,45 @@ canvas{
 
 <canvas id="stars"></canvas>
 
-<div class="container">
+<div class="top-text">Easy Access For You</div>
 
-    <div class="top-text">Easy Access For You</div>
+<img src="profile.jpg" class="profile-img" alt="Profile">
 
-    <img src="profile.jpg" class="profile-img">
+<div class="name">SAADY</div>
+<div class="birthday">12/12/2007</div>
 
-    <div class="name">SAADY</div>
-    <div class="birthday">12/12/2007</div>
+<div class="links">
 
-    <div class="links">
+    <a href="tel:+201095625765" class="link">
+        <i class="fa-solid fa-phone phone"></i>
+        Communication
+    </a>
 
-        <a href="tel:+201095625765" class="link">
-            <i class="fa-solid fa-phone phone"></i>
-            Communication
-        </a>
+    <a href="https://wa.me/201095625765" class="link">
+        <i class="fa-brands fa-whatsapp whatsapp"></i>
+        WhatsApp
+    </a>
 
-        <a href="https://wa.me/201095625765" class="link">
-            <i class="fa-brands fa-whatsapp whatsapp"></i>
-            WhatsApp
-        </a>
+    <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank" class="link">
+        <i class="fa-brands fa-instagram instagram"></i>
+        Instagram
+    </a>
 
-        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank" class="link">
-            <i class="fa-brands fa-instagram instagram"></i>
-            Instagram
-        </a>
+    <a href="mailto:els3dy111@gmail.com" class="link">
+        <i class="fa-solid fa-envelope email"></i>
+        Email
+    </a>
 
-        <a href="mailto:els3dy111@gmail.com" class="link">
-            <i class="fa-solid fa-envelope email"></i>
-            Email
-        </a>
+    <a href="#" class="link">
+        <i class="fa-brands fa-snapchat snapchat"></i>
+        Snapchat
+    </a>
 
-        <a href="#" class="link">
-            <i class="fa-brands fa-snapchat snapchat"></i>
-            Snapchat
-        </a>
+    <a href="#" class="link">
+        <i class="fa-brands fa-pinterest pinterest"></i>
+        Pinterest
+    </a>
 
-        <a href="#" class="link">
-            <i class="fa-brands fa-pinterest pinterest"></i>
-            Pinterest
-        </a>
-
-    </div>
 </div>
 
 <script>
