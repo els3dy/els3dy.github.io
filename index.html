@@ -3,12 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saady</title>
+<title>SAADY</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -20,148 +17,153 @@
 }
 
 body{
-    background:#071a33;
-    color:#fff;
     height:100vh;
-    overflow:hidden;
+    background:#050f22;
+    color:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
+    text-align:center;
+    overflow:hidden;
 }
 
-/* ⭐ Stars Background */
+/* ⭐ Stars */
 canvas{
     position:fixed;
     inset:0;
     z-index:-1;
 }
 
-/* 📦 Main Card */
-.card{
-    width:360px;
-    background:rgba(10,25,50,0.9);
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    backdrop-filter:blur(10px);
+/* 📦 Content */
+.container{
+    width:100%;
+    max-width:700px;
+    padding:20px;
+}
+
+/* 🔤 Top text */
+.top-text{
+    font-size:18px;
+    letter-spacing:2px;
+    color:#eae6da;
+    margin-bottom:30px;
 }
 
 /* 🖼 Profile */
 .profile-img{
-    width:110px;
-    height:110px;
+    width:180px;
+    height:180px;
     border-radius:50%;
-    border:3px solid #eae6da;
+    border:4px solid #eae6da;
     object-fit:cover;
-    margin-bottom:15px;
+    margin-bottom:30px;
 }
 
-/* 🧑 Name */
+/* 🔥 Name */
 .name{
-    font-size:26px;
-    font-weight:600;
-    margin-bottom:5px;
+    font-size:64px;
+    font-weight:800;
+    letter-spacing:6px;
+    margin-bottom:6px;
 }
 
+/* 🎂 Birthday */
 .birthday{
-    font-size:14px;
-    color:#cfcfcf;
-    margin-bottom:25px;
+    font-size:16px;
+    color:#d0d0d0;
+    margin-bottom:45px;
 }
 
-/* 📋 Info List */
-.list{
+/* 🔗 Links */
+.links{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:32px; /* مسافة بين الأيقونات */
 }
 
-.item{
-    background:#0c2a4f;
-    border-radius:14px;
-    padding:14px 16px;
+.link{
+    width:100%;
+    background:rgba(12,42,79,0.9);
+    padding:24px 26px; /* padding أكبر للراحة */
+    border-radius:18px;
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:18px;
     text-decoration:none;
-    color:#fff;
+    color:white;
+    font-size:18px;
     transition:0.3s;
 }
 
-.item:hover{
-    background:#123d70;
+.link:hover{
+    background:#154a88;
     transform:translateY(-2px);
 }
 
-.item i{
-    font-size:20px;
-    width:26px;
+.link i{
+    font-size:26px;
+    width:32px;
 }
 
-.item span{
-    font-size:15px;
-    letter-spacing:0.3px;
-}
-
-/* Icon colors (old style – clean) */
+/* Colors */
 .phone{color:#4cff4c;}
 .whatsapp{color:#25D366;}
 .instagram{color:#E1306C;}
 .email{color:#ffd369;}
 .snapchat{color:#fffc00;}
 .pinterest{color:#e60023;}
-
 </style>
 </head>
+
 <body>
 
 <canvas id="stars"></canvas>
 
-<div class="card">
+<div class="container">
 
-    <!-- Change image src -->
-    <img src="profile.jpg" class="profile-img" alt="Saady">
+    <div class="top-text">Easy Access For You</div>
 
-    <div class="name">Saady</div>
-    <div class="birthday">12 December</div>
+    <img src="profile.jpg" class="profile-img">
 
-    <div class="list">
+    <div class="name">SAADY</div>
+    <div class="birthday">12/12/2007</div>
 
-        <a href="tel:+201234567890" class="item">
+    <div class="links">
+
+        <a href="tel:+201095625765" class="link">
             <i class="fa-solid fa-phone phone"></i>
-            <span>Communication</span>
+            Communication
         </a>
 
-        <a href="https://wa.me/201234567890" class="item">
+        <a href="https://wa.me/201095625765" class="link">
             <i class="fa-brands fa-whatsapp whatsapp"></i>
-            <span>WhatsApp</span>
+            WhatsApp
         </a>
 
-        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank" class="item">
+        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank" class="link">
             <i class="fa-brands fa-instagram instagram"></i>
-            <span>Instagram</span>
+            Instagram
         </a>
 
-        <a href="mailto:saady@email.com" class="item">
+        <a href="mailto:els3dy111@gmail.com" class="link">
             <i class="fa-solid fa-envelope email"></i>
-            <span>Email</span>
+            Email
         </a>
 
-        <a href="#" class="item">
+        <a href="#" class="link">
             <i class="fa-brands fa-snapchat snapchat"></i>
-            <span>Snapchat</span>
+            Snapchat
         </a>
 
-        <a href="#" class="item">
+        <a href="#" class="link">
             <i class="fa-brands fa-pinterest pinterest"></i>
-            <span>Pinterest</span>
+            Pinterest
         </a>
 
     </div>
 </div>
 
 <script>
-/* ⭐ Stars Animation */
 const canvas = document.getElementById("stars");
 const ctx = canvas.getContext("2d");
 let w,h,stars=[];
@@ -170,33 +172,32 @@ function resize(){
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
 }
-window.addEventListener("resize", resize);
 resize();
+window.addEventListener("resize", resize);
 
-for(let i=0;i<120;i++){
+for(let i=0;i<150;i++){
     stars.push({
         x:Math.random()*w,
         y:Math.random()*h,
-        r:Math.random()*1.8+0.8,
+        r:Math.random()*2.5+1.5,
         o:Math.random(),
-        s:Math.random()*0.01+0.002
+        s:Math.random()*0.01+0.004
     });
 }
 
-function draw(){
+function animate(){
     ctx.clearRect(0,0,w,h);
     stars.forEach(star=>{
         star.o += star.s;
         if(star.o>1 || star.o<0) star.s*=-1;
-
         ctx.beginPath();
         ctx.arc(star.x,star.y,star.r,0,Math.PI*2);
-        ctx.fillStyle = `rgba(245,240,230,${star.o})`;
+        ctx.fillStyle=`rgba(245,240,230,${star.o})`;
         ctx.fill();
     });
-    requestAnimationFrame(draw);
+    requestAnimationFrame(animate);
 }
-draw();
+animate();
 </script>
 
 </body>
