@@ -7,7 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;font-family:'Poppins',sans-serif}
+*{
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
 body{
     margin:0;
@@ -20,60 +23,62 @@ body{
     overflow:hidden;
 }
 
-/* stars */
+/* ===== STARS ===== */
 canvas{
     position:fixed;
     inset:0;
     z-index:-1;
 }
 
-/* content */
+/* ===== WRAPPER ===== */
 .wrapper{
     width:100%;
-    max-width:420px;
+    max-width:480px; /* كبرنا الحجم */
+    padding:40px 20px;
     text-align:center;
-    padding:30px 20px;
 }
 
-/* profile */
+/* ===== PROFILE ===== */
 .profile{
-    width:120px;
-    height:120px;
+    width:140px;   /* كبرنا الصورة */
+    height:140px;
     border-radius:50%;
     object-fit:cover;
     border:3px solid #e5e7eb;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .name{
-    font-size:24px;
+    font-size:26px;
     font-weight:600;
 }
 
 .desc{
-    font-size:14px;
-    opacity:.8;
-    margin-bottom:30px;
+    font-size:15px;
+    opacity:.85;
+    margin-bottom:35px;
 }
 
-/* buttons */
+/* ===== BUTTONS ===== */
 .link{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
+    gap:14px;
     background:#fff;
     color:#111;
     text-decoration:none;
-    padding:16px;
+    padding:18px; /* أزرار أكبر */
     border-radius:999px;
-    margin-bottom:16px;
-    font-size:16px;
+    margin-bottom:18px;
+    font-size:17px;
     font-weight:500;
     transition:.3s;
 }
 
-.link img{width:22px}
+.link img{
+    width:24px; /* نفس حجم الأيقونات القديمة */
+}
 
 .link:hover{
     transform:scale(1.04);
@@ -88,12 +93,14 @@ canvas{
 
 <div class="wrapper">
 
+    <!-- PROFILE -->
     <img src="IMG_20251210_010736.jpg" class="profile">
 
     <div class="name">Abdelrahman ElSaady</div>
     <div class="desc">Easy Access For You ✨</div>
 
-    <a class="link" href="https://www.instagram.com/el_s3dy" target="_blank">
+    <!-- LINKS (الأيقونات القديمة) -->
+    <a class="link" href="https://www.instagram.com/el_s3dy?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
         Instagram
     </a>
@@ -113,21 +120,37 @@ canvas{
         Snapchat
     </a>
 
+    <a class="link" href="https://pin.it/69rqPwAhW" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png">
+        Pinterest
+    </a>
+
 </div>
 
 <script>
+/* ===== STARS ===== */
 const c=document.getElementById("bg"),x=c.getContext("2d");
 function r(){c.width=innerWidth;c.height=innerHeight}
 r();addEventListener("resize",r);
 let s=[];
-for(let i=0;i<160;i++)
-s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2+1,a:Math.random(),d:Math.random()*0.02});
+for(let i=0;i<180;i++)
+s.push({
+x:Math.random()*c.width,
+y:Math.random()*c.height,
+r:Math.random()*2+1.5,
+a:Math.random(),
+d:Math.random()*0.02
+});
 (function a(){
-x.fillStyle="#081426";x.fillRect(0,0,c.width,c.height);
+x.fillStyle="#081426";
+x.fillRect(0,0,c.width,c.height);
 s.forEach(e=>{
-e.a+=e.d;if(e.a>1||e.a<.2)e.d*=-1;
-x.beginPath();x.arc(e.x,e.y,e.r,0,Math.PI*2);
-x.fillStyle=`rgba(255,255,240,${e.a})`;x.fill();
+e.a+=e.d;
+if(e.a>1||e.a<.2)e.d*=-1;
+x.beginPath();
+x.arc(e.x,e.y,e.r,0,Math.PI*2);
+x.fillStyle=`rgba(255,255,240,${e.a})`;
+x.fill();
 });
 requestAnimationFrame(a);
 })();
