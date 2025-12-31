@@ -2,158 +2,211 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ElSaady Links</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saady Profile</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
 
 body{
-    margin:0;
     min-height:100vh;
-    background:#081426;
-    color:#fff;
+    background:#050f24;
     display:flex;
     justify-content:center;
     align-items:center;
+    color:#fff;
     overflow:hidden;
 }
 
-/* ===== STARS ===== */
-canvas{
+/* ===== Stars Background ===== */
+.stars{
     position:fixed;
     inset:0;
     z-index:-1;
 }
 
-/* ===== WRAPPER ===== */
-.wrapper{
-    width:100%;
-    max-width:480px; /* كبرنا الحجم */
-    padding:40px 20px;
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:#f5f5f0;
+    border-radius:50%;
+    opacity:0;
+    animation: twinkle 6s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{opacity:0}
+    50%{opacity:1}
+}
+
+/* ===== Main Card ===== */
+.container{
+    width:90%;
+    max-width:420px;
+    background:rgba(10,20,50,0.6);
+    backdrop-filter:blur(14px);
+    border-radius:22px;
+    padding:30px 25px 35px;
     text-align:center;
 }
 
-/* ===== PROFILE ===== */
-.profile{
-    width:140px;   /* كبرنا الصورة */
-    height:140px;
+/* ===== Profile Image ===== */
+.profile-img{
+    width:120px;
+    height:120px;
     border-radius:50%;
+    overflow:hidden;
+    margin:0 auto 18px;
+    border:3px solid #1f3b7a;
+}
+
+.profile-img img{
+    width:100%;
+    height:100%;
     object-fit:cover;
-    border:3px solid #e5e7eb;
+}
+
+/* ===== Name ===== */
+h1{
+    font-size:26px;
+    font-weight:500;
     margin-bottom:18px;
 }
 
-.name{
-    font-size:26px;
-    font-weight:600;
+/* ===== Info ===== */
+.info{
+    margin-bottom:25px;
 }
 
-.desc{
-    font-size:15px;
-    opacity:.85;
-    margin-bottom:35px;
+.info p{
+    font-size:17px;
+    margin:8px 0;
 }
 
-/* ===== BUTTONS ===== */
+.info span{
+    font-weight:500;
+}
+
+/* ===== Links ===== */
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
 .link{
     display:flex;
     align-items:center;
-    justify-content:center;
     gap:14px;
-    background:#fff;
-    color:#111;
+    background:rgba(15,30,70,0.8);
+    padding:14px 18px;
+    border-radius:14px;
     text-decoration:none;
-    padding:18px; /* أزرار أكبر */
-    border-radius:999px;
-    margin-bottom:18px;
+    color:white;
     font-size:17px;
-    font-weight:500;
     transition:.3s;
 }
 
-.link img{
-    width:24px; /* نفس حجم الأيقونات القديمة */
+.link:hover{
+    transform:translateY(-2px);
+    background:rgba(25,45,95,0.9);
 }
 
-.link:hover{
-    transform:scale(1.04);
-    box-shadow:0 0 25px rgba(255,255,255,.35);
+.link i{
+    font-size:22px;
 }
+
+/* Icon Original Colors */
+.phone i{color:#34c759;}
+.whatsapp i{color:#25D366;}
+.instagram i{color:#E1306C;}
+.email i{color:#4da6ff;}
+.snapchat i{color:#FFFC00;}
+.pinterest i{color:#E60023;}
 </style>
 </head>
 
 <body>
 
-<canvas id="bg"></canvas>
+<div class="stars" id="stars"></div>
 
-<div class="wrapper">
+<div class="container">
 
-    <!-- PROFILE -->
-    <img src="IMG_20251210_010736.jpg" class="profile">
+    <!-- Image -->
+    <div class="profile-img">
+        <img src="your-image.jpg" alt="Profile">
+    </div>
 
-    <div class="name">Abdelrahman ElSaady</div>
-    <div class="desc">Easy Access For You ✨</div>
+    <!-- Name -->
+    <h1>Abdelrahman Saady</h1>
 
-    <!-- LINKS (الأيقونات القديمة) -->
-    <a class="link" href="https://www.instagram.com/el_s3dy?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
-        Instagram
-    </a>
+    <!-- Info -->
+    <div class="info">
+        <p><span>Name:</span> Abdelrahman Saady</p>
+        <p><span>Birthday:</span> 12 December</p>
+        <p><span>Phone:</span> +20 1XXXXXXXXX</p>
+    </div>
 
-    <a class="link" href="https://wa.me/201095625765" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-        WhatsApp
-    </a>
+    <!-- Links -->
+    <div class="links">
 
-    <a class="link" href="mailto:els3dy111@gmail.com">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-        els3dy111@gmail.com
-    </a>
+        <a href="tel:+201XXXXXXXXX" class="link phone">
+            <i class="fa-solid fa-phone"></i>
+            Communication
+        </a>
 
-    <a class="link" href="https://www.snapchat.com/add/el_s33dy" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png">
-        Snapchat
-    </a>
+        <a href="https://wa.me/201XXXXXXXXX" class="link whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+        </a>
 
-    <a class="link" href="https://pin.it/69rqPwAhW" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png">
-        Pinterest
-    </a>
+        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" class="link instagram" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+        </a>
+
+        <a href="mailto:example@email.com" class="link email">
+            <i class="fa-solid fa-envelope"></i>
+            Email
+        </a>
+
+        <a href="https://snapchat.com/add/username" class="link snapchat" target="_blank">
+            <i class="fa-brands fa-snapchat"></i>
+            Snapchat
+        </a>
+
+        <a href="https://pinterest.com/username" class="link pinterest" target="_blank">
+            <i class="fa-brands fa-pinterest"></i>
+            Pinterest
+        </a>
+
+    </div>
 
 </div>
 
 <script>
-/* ===== STARS ===== */
-const c=document.getElementById("bg"),x=c.getContext("2d");
-function r(){c.width=innerWidth;c.height=innerHeight}
-r();addEventListener("resize",r);
-let s=[];
-for(let i=0;i<180;i++)
-s.push({
-x:Math.random()*c.width,
-y:Math.random()*c.height,
-r:Math.random()*2+1.5,
-a:Math.random(),
-d:Math.random()*0.02
-});
-(function a(){
-x.fillStyle="#081426";
-x.fillRect(0,0,c.width,c.height);
-s.forEach(e=>{
-e.a+=e.d;
-if(e.a>1||e.a<.2)e.d*=-1;
-x.beginPath();
-x.arc(e.x,e.y,e.r,0,Math.PI*2);
-x.fillStyle=`rgba(255,255,240,${e.a})`;
-x.fill();
-});
-requestAnimationFrame(a);
-})();
+const starsContainer = document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+    const star=document.createElement("div");
+    star.classList.add("star");
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.animationDelay=Math.random()*6+"s";
+    starsContainer.appendChild(star);
+}
 </script>
 
 </body>
