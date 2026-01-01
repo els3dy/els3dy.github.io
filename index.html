@@ -22,80 +22,80 @@ body{
     color:#fff;
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start; /* شيلنا التمركز المبالغ فيه */
     text-align:center;
     overflow:hidden;
 }
 
-/* stars */
+/* ⭐ stars */
 canvas{
     position:fixed;
     inset:0;
     z-index:-1;
 }
 
-/* content */
+/* المحتوى */
 .wrapper{
     width:100%;
-    max-width:760px;
-    padding:40px 20px;
+    max-width:780px;
+    padding:30px 20px 40px; /* فراغ أقل */
 }
 
-/* text */
+/* النص العلوي */
 .top-text{
-    font-size:18px;
+    font-size:20px;
     letter-spacing:3px;
     color:#eae6da;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
-/* image */
+/* الصورة */
 .profile-img{
-    width:190px;
-    height:190px;
+    width:210px;   /* كبرنا */
+    height:210px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid #eae6da;
-    margin-bottom:28px;
+    margin-bottom:22px;
 }
 
-/* name */
+/* الاسم */
 .name{
-    font-size:42px; /* لا ضخم ولا صغير */
+    font-size:46px; /* واضح بدون مبالغة */
     font-weight:600;
     letter-spacing:6px;
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
-/* birthday */
+/* الميلاد */
 .birthday{
-    font-size:15px;
+    font-size:16px;
     color:#cfcfcf;
-    margin-bottom:50px;
+    margin-bottom:36px;
 }
 
-/* links */
+/* الروابط */
 .links{
     display:flex;
     flex-direction:column;
-    gap:22px;
+    gap:20px;
 }
 
-/* pill buttons */
+/* الأزرار */
 .link{
     margin:0 auto;
     display:flex;
     align-items:center;
-    gap:18px;
-    padding:18px 34px;
+    justify-content:center;
+    gap:16px;
+    padding:20px 36px; /* كبرنا الزر نفسه */
     background:rgba(15,55,105,0.9);
-    border-radius:999px; /* pill */
+    border-radius:999px;
     text-decoration:none;
     color:#fff;
-    font-size:20px;
+    font-size:21px;
     font-weight:500;
-    min-width:320px; /* حجم واضح */
-    justify-content:center;
+    min-width:340px; /* أوضح */
     transition:0.3s;
 }
 
@@ -105,10 +105,10 @@ canvas{
 }
 
 .link i{
-    font-size:26px;
+    font-size:28px;
 }
 
-/* icon colors */
+/* ألوان */
 .phone{color:#4cff4c;}
 .whatsapp{color:#25D366;}
 .instagram{color:#E1306C;}
@@ -143,7 +143,7 @@ canvas{
             WhatsApp
         </a>
 
-        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" class="link" target="_blank">
+        <a href="https://www.instagram.com/s.a.a.d.y?igsh=MTZtazRvOGF1MHJqOQ==" target="_blank" class="link">
             <i class="fa-brands fa-instagram instagram"></i>
             Instagram
         </a>
@@ -153,12 +153,14 @@ canvas{
             Email
         </a>
 
-        <a href="#" class="link">
+        <!-- سناب شات -->
+        <a href="https://www.snapchat.com/add/el_s33dy" target="_blank" class="link">
             <i class="fa-brands fa-snapchat snapchat"></i>
             Snapchat
         </a>
 
-        <a href="#" class="link">
+        <!-- بنترست -->
+        <a href="https://pin.it/69rqPwAhW" target="_blank" class="link">
             <i class="fa-brands fa-pinterest pinterest"></i>
             Pinterest
         </a>
@@ -178,7 +180,7 @@ function resize(){
 resize();
 window.addEventListener("resize", resize);
 
-for(let i=0;i<140;i++){
+for(let i=0;i<130;i++){
     stars.push({
         x:Math.random()*w,
         y:Math.random()*h,
